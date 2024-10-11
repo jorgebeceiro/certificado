@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jorge.prueba</groupId>
+  <artifactId>certificado</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+  	
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>3.3.4</spring.version>
+    <!--propiedad incluida para el reproduible builds-->
+ 	<project.build.outputTimestamp>2023-01-01T00:00:00Z</project.build.outputTimestamp>
+  </properties>
+	<pluginRepositories>
+        <pluginRepository>
+            <id>apache-repo</id> <!-- ID único para el repositorio -->
+            <url>https://repository.apache.org/content/repositories/releases/</url> <!-- URL del repositorio -->
+            <releases>
+                <enabled>true</enabled> <!-- Habilitar releases -->
+            </releases>
+            <snapshots>
+                <enabled>false</enabled> <!-- No habilitar snapshots -->
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>apache-snapshots</id> <!-- ID para el repositorio de snapshots -->
+            <url>https://repository.apache.org/snapshots/</url> <!-- URL del repositorio de snapshots -->
+            <releases>
+                <enabled>false</enabled> <!-- No habilitar releases -->
+            </releases>
+            <snapshots>
+                <enabled>true</enabled> <!-- Habilitar snapshots -->
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+  <dependencies>
+    <!-- Dependencias de Spring Boot -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-validation</artifactId>
+         <version>${spring.version}</version>
+   </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+         <version>${spring.version}</version>
+   </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+	    <version>4.0.2</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcpkix-jdk15on</artifactId>
+	    <version>1.70</version> <!-- Usa la última versión disponible -->
+	</dependency>
+	
+	<!-- INCIO SOLUCIONAR PROBLEMA Failed to instantiate [javax.xml.ws.Endpoint]: Factory method 'endpoint' threw exception with message: javax/xml/bind/annotation/XmlSchema-->
+	<!--dependency>
+	    <groupId>jakarta.xml.bind</groupId>
+	    <artifactId>jakarta.xml.bind-api</artifactId>
+	    <version>2.3.3</version> 
+	<dependency -->
+	<!-- INCIO SOLUCIONAR PROBLEMA Failed to instantiate [javax.xml.ws.Endpoint]: Factory method 'endpoint' threw exception with message: javax/xml/bind/annotation/XmlSchema-->
+
+	<!-- dependency>
+	    <groupId>org.glassfish.jaxb</groupId>
+	    <artifactId>jaxb-runtime</artifactId>
+	    <version>2.3.3</version>
+	</dependency -->
+	<!-- FIN SOLUCIONAR PROBLEMA -->
+    <!-- Driver de la base de datos, por ejemplo MySQL -->
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+	    <version>2.3.232</version>
+	    <scope>runtime</scope>
+	</dependency>
+	
+</dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>${spring.version}</version>
+             <configuration>
+                <mainClass>com.jorge.prueba.CertificadoAplicacion</mainClass>
+             	<jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005</jvmArguments>
+            </configuration>
+        </plugin>
+    </plugins>
+
+</build>
+</project>

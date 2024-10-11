@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/dorobejo/.m2/repository/jakarta/xml/soap/jakarta.xml.soap-api/1.4.2/jakarta.xml.soap-api-1.4.2.jar" sourcepath="C:/Users/dorobejo/.m2/repository/jakarta/xml/soap/jakarta.xml.soap-api/1.4.2/jakarta.xml.soap-api-1.4.2-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="jakarta.xml.soap"/>
+			<attribute name="maven.artifactId" value="jakarta.xml.soap-api"/>
+			<attribute name="maven.version" value="1.4.2"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/dorobejo/.m2/repository/jakarta/xml/ws/jakarta.xml.ws-api/2.3.3/jakarta.xml.ws-api-2.3.3.jar" sourcepath="C:/Users/dorobejo/.m2/repository/jakarta/xml/ws/jakarta.xml.ws-api/2.3.3/jakarta.xml.ws-api-2.3.3-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="jakarta.xml.ws"/>
+			<attribute name="maven.artifactId" value="jakarta.xml.ws-api"/>
+			<attribute name="maven.version" value="2.3.3"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/dorobejo/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar" sourcepath="C:/Users/dorobejo/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="jakarta.xml.bind"/>
+			<attribute name="maven.artifactId" value="jakarta.xml.bind-api"/>
+			<attribute name="maven.version" value="2.3.3"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/dorobejo/.m2/repository/jakarta/jws/jakarta.jws-api/2.1.0/jakarta.jws-api-2.1.0.jar" sourcepath="C:/Users/dorobejo/.m2/repository/jakarta/jws/jakarta.jws-api/2.1.0/jakarta.jws-api-2.1.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="jakarta.jws"/>
+			<attribute name="maven.artifactId" value="jakarta.jws-api"/>
+			<attribute name="maven.version" value="2.1.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

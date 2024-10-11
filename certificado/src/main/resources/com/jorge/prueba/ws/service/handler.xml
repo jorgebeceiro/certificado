@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+    <handler-chain>
+        <!-- Definición del manejador -->
+        <handler>
+            <!-- Nombre completo de la clase del handler -->
+            <handler-class>com.jorge.prueba.ws.handler.PruebaValidatorHandler</handler-class>
+        </handler>
+    </handler-chain>
+</handler-chains>
