@@ -110,7 +110,39 @@
 	    <version>2.0.1</version>
 	</dependency>
 
-	
+    <!-- Apache CXF Logging -->
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-rt-features-logging</artifactId>
+	    <version>4.0.2</version> <!-- Ajusta la versión según la que estés usando -->
+	</dependency>
+
+
+    <!-- Apache CXF WS-Security -->
+   
+    <dependency>
+        <groupId>org.apache.cxf</groupId>	
+        <artifactId>cxf-rt-ws-security</artifactId>
+        <version>4.0.2</version>
+        <exclusions>
+        	<exclusion>
+        	 <groupId> javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        	</exclusion>
+         	<exclusion>
+        	 <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+        	</exclusion>
+   	</exclusions>
+
+    </dependency>
+ <!-- Apache CXF WS-Security Dependencia transitiva que tenemos que cambiar la version  -->
+	<dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>4.0.2</version>
+    </dependency>
+
 	<!-- JUnit 5 -->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
@@ -124,7 +156,6 @@
         <version>4.0.2</version>
         <scope>test</scope>
     </dependency>-->
-   
 
  	<dependency>
         <groupId>org.eclipse.jetty</groupId>

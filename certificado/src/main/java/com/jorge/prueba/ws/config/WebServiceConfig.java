@@ -18,6 +18,7 @@ public class WebServiceConfig {
     @Bean
     public Endpoint endpoint() {
         EndpointImpl endpoint = new EndpointImpl(bus, new CalculatorServiceImpl());
+       
         endpoint.publish("/Hello");
         return endpoint;
     }
