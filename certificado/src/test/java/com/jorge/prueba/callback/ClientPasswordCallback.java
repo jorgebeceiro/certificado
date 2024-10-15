@@ -15,7 +15,7 @@ public class ClientPasswordCallback implements CallbackHandler {
                 WSPasswordCallback pc = (WSPasswordCallback) callback;
                 // Aquí puedes validar el usuario y la contraseña
                 if ("jorge".equals(pc.getIdentifier())) {
-                    pc.setPassword("passAlias");
+                    pc.setPassword("passKeyStore");
                 }else if("server".equals(pc.getIdentifier())) {
                 	pc.setPassword("passAlias");
                 }else if("prueba".equals(pc.getIdentifier())) {
