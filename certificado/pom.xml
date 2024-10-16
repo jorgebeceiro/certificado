@@ -142,14 +142,20 @@
         <artifactId>jakarta.xml.bind-api</artifactId>
         <version>4.0.2</version>
     </dependency>
-
-	<!-- JUnit 5 -->
+ <!-- Spring Boot Starter para pruebas -->
     <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+    </dependency>
+	<!-- JUnit 5 -->
+    <!--dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
         <version>5.10.0</version>
         <scope>test</scope>
-    </dependency>
+    </dependency>-->
  	<!--dependency>
         <groupId>org.apache.cxf</groupId>
         <artifactId>cxf-rt-transports-http-jetty</artifactId>
@@ -178,6 +184,12 @@
 	    <groupId>org.slf4j</groupId>
 	    <artifactId>slf4j-simple</artifactId>
 	    <version>1.7.36</version> 
+	</dependency>
+	<!-- para la lectura de la extension de issuer del certificado-->
+	<dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcpkix-jdk15on</artifactId>
+	    <version>1.70</version> <!-- Reemplaza con la última versión -->
 	</dependency>
 
 </dependencies>
